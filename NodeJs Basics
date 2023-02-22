@@ -1,0 +1,93 @@
+// const fs=require("fs");
+// for asynchronous call...
+// fs.readFile("./sample.txt","utf-8",(err,data)=>{
+//     if(err){
+//         return err;
+//     }
+//     console.log(data);
+// // })
+// const a = fs.readFileSync("./sample.txt","utf-8");
+// console.log(a);
+
+
+
+
+// let data = "This is a file con/taining a collection of books"
+// fs.writeFile("./sample.txt",data,(err)=>{
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("file written succesfully");
+//     }
+// })
+// fs.writeFileSync("./sample1.txt",data);
+// console.log("I am first");
+
+// const path= require("path");
+// const a = path.extname("/node/index1.js");
+// console.log(a);
+
+
+
+// const os = require("os")
+// console.log(os.totalmem());//924241920
+// console.log(os.freemem());DESKTOP-EON7IB7
+// console.log(os.hostname());8341983232
+
+
+
+
+// const http =  require("http");
+// http.createServer((request,response)=>{
+//     response.write("hello World!");
+
+//     response.end();
+// })
+// .listen(3000);
+// var http = require('http');
+
+// // Create a server
+// http.createServer((request, response)=>{
+
+
+
+
+// 	// Sends a chunk of the response body
+// 	response.write('Hello World!');
+
+// 	// Signals the server that all of
+// 	// the response headers and body
+// 	// have been sent
+// response.end();
+// })
+// .listen(3000); // Server listening on port 3000
+
+
+
+// const pokemon = require("pokemon");
+
+// console.log(pokemon.random());
+// const doraemon = require("pokemon");
+// console.log(doraemon.all());
+
+
+const fs=require('fs');
+const home=fs.readFileSync("./index.html","utf-8");
+
+const { response } = require("express");
+const http = require("http");
+const server = http.createServer((req,res)=>{
+    if(req.url === "/home"){
+        res.end(home);
+    }
+    if(req.url==="/about"){
+        res.end("<h1>About</h1>");
+    }
+    else{
+    res.end("Working");
+    }
+});
+server.listen(7000,"localhost",()=>{
+    console.log("Server is working on http://localhost:7000");
+});
