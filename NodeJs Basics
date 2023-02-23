@@ -1,4 +1,4 @@
-const fs=require("fs");
+const fs=require("fs")
 
 // for asynchronous call for reading file from already existing file...
 fs.readFile("./sample.txt","utf-8",(err,data)=>{
