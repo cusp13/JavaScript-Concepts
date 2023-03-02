@@ -1,0 +1,22 @@
+// All values except false, 0, 0n, -0, “”, null, undefined, and NaN are truthy values.
+
+
+
+// OR ( | | ) operator - If the first value is truthy, then the first value is returned. Otherwise,
+// always the second value gets returned.
+
+// AND ( && ) operator - If both the values are truthy, always the second value is returned. If the first value is
+// falsy then the first value is returned or if the second value is falsy then the second value is returned.
+
+
+var x = 10;
+var y = "badal";
+var z = undefined;
+var a = 0;
+
+console.log(x||y); //10; here if first is truthy then it will return first otherwise second in all case.
+console.log(z||a);//0
+console.log(x||z);//10
+console.log(x&&y);//badal becoz x & y are truthy so will return second value.
+console.log(x&&z);//undefined
+console.log(a&&y);//0
