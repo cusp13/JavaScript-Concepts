@@ -20,3 +20,31 @@ console.log(x||z);//10
 console.log(x&&y);//badal becoz x & y are truthy so will return second value.
 console.log(x&&z);//undefined
 console.log(a&&y);//0
+
+
+//Equality coercion:-
+
+
+Equality coercion takes place when using ‘ == ‘ operator. As we have stated before
+
+The ‘ == ‘ operator compares values and not types.
+
+While the above statement is a simple way to explain == operator, it’s not completely true
+
+The reality is that while using the ‘==’ operator, coercion takes place.
+
+The ‘==’ operator, converts both the operands to the same type and then compares them.
+
+Example:
+
+var a = 12;
+var b = "12";
+a == b // Returns true because both 'a' and 'b' are converted to the same type and then compared. Hence the operands are equal.
+Coercion does not take place when using the ‘===’ operator. Both operands are not converted to the same type in the case of ‘===’ operator.
+
+Example:
+
+var a = 226;
+var b = "226";
+
+a === b // Returns false because coercion does not take place and the  operands are of different types. Hence 
